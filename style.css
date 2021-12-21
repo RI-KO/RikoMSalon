@@ -1,0 +1,277 @@
+* {
+  font-family: "Kiwi Maru", serif;
+}
+
+span,
+.textdec,
+.LoGo,
+.topText {
+  font-family: "Lobster", cursive;
+}
+span {
+  color: #2c4f54;
+}
+
+.header,
+.footer {
+  color: #006e54;
+}
+
+/* ヘッダー */
+.header {
+  width: 100%;
+  height: auto;
+  padding: 5px 0;
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  z-index: 10;
+}
+
+.headerLogo {
+  font-size: 25px;
+  width: 80px;
+  padding: 0 10px;
+}
+
+.headerNav {
+  width: 45%;
+  display: inline;
+}
+
+.headerNavContent {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+.headerNavItem:not(:last-child) {
+  margin-right: 10px;
+}
+
+/* top画像 */
+.topBG {
+  height: 80vh;
+  background: url(./スライドスタート.JPG) no-repeat top;
+  background-size: cover;
+}
+
+.topText {
+  text-shadow: 2px 4px 4px #f14ead;
+  text-align: center;
+  font-size: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: inherit;
+}
+
+/* タイ式マッサージとは */
+.introMSText {
+  display: inline-block;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 4px #808080;
+  margin-bottom: 20px;
+  background: linear-gradient(transparent 75%, #008899 60%);
+}
+
+.introMS {
+  width: 80%;
+  padding: 10px;
+  margin: 10px auto;
+}
+
+.introMSconttent {
+  display: flex;
+}
+
+img[src] {
+  width: 20%;
+  height: 20%;
+  margin-right: 20px;
+}
+
+/* 初回体験 */
+.card {
+  width: 25%;
+  padding: 20px 12px 10px;
+  border: 2px solid #006a6c;
+  background: #f7fcfe;
+  border-radius: 3px;
+  margin: 40px auto;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+}
+
+.cardText {
+  padding: 10px 0;
+  font-size: 1rem;
+}
+
+.link {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 10px auto;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #006400;
+}
+
+/* フッター */
+.footer {
+  width: 80%;
+  background: white;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerinfo {
+  width: 62%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footerTextBold {
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+
+.footerLogo {
+  font-size: 1.5rem;
+}
+
+.footerSalonText,
+.footerReserve {
+  font-size: 0.9rem;
+}
+
+.footerReserveTell {
+  border: solid 1px #006400;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 5px 0;
+  padding: 5px;
+}
+
+.copyright {
+  display: block;
+  margin: 10px 0 10px 0;
+  font-size: 0.7rem;
+  text-align: end;
+  padding: 10px;
+}
+
+/* ホバー */
+a:hover,
+a + span:hover {
+  opacity: 0.5;
+}
+
+/* テキストアニメーション */
+.textdec span {
+  animation: show 2s backwards;
+  color: white;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 背景画像スライド */
+.topBG {
+  transition: all 2s ease-in-out;
+}
+
+/* レスポンシブ */
+/* PC */
+@media (max-width: 1420px) {
+  .footerinfo {
+    flex-direction: column;
+  }
+  .footerReserve {
+    margin-top: 10px;
+  }
+  .footerReserveTell {
+    display: inline-block;
+    padding: 5px 100px;
+  }
+  .footerinfo {
+    width: 45%;
+  }
+}
+@media (max-width: 1200px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .headerNav {
+    width: 80%;
+  }
+  .headerNavContent {
+    justify-content: center;
+  }
+  .introMSconttent {
+    flex-direction: column;
+  }
+  img[src] {
+    width: 40%;
+    height: 40%;
+    margin: 0 auto;
+  }
+  .card {
+    width: 50%;
+  }
+}
+@media (max-width: 1080px) {
+  .footerinfo {
+    width: 65%;
+  }
+  .topText {
+    font-size: 3rem;
+  }
+}
+/* タブレット */
+@media (max-width: 780px) {
+  .footerReserveTell {
+    display: none;
+  }
+  .headerNav {
+    width: 100%;
+  }
+  .headerNavContent {
+    justify-content: space-between;
+    overflow-x: auto;
+  }
+  .headerNavItem {
+    padding: 5px 5px;
+    word-break: keep-all;
+  }
+  .topText {
+    font-size: 2rem;
+  }
+}
+/* モバイル */
+@media (max-width: 480px) {
+  .introMSText {
+    font-size: 1rem;
+  }
+  .footerLogo {
+    font-size: 1rem;
+  }
+}
